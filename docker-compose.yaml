@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  mybot:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    tty: true
+    command:
+      poetry run python src/run.py
+    volumes:
+      - .:/app
