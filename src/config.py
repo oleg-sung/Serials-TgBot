@@ -1,13 +1,12 @@
 import os
 
-from pydantic import AnyHttpUrl
 from pydantic_settings import SettingsConfigDict, BaseSettings
 
 
 class Config(BaseSettings):
 
     BOT_TOKEN: str
-    API_URL: AnyHttpUrl = 'https://api.tvmaze.com/'
+    API_URL: str = 'https://api.tvmaze.com/'
     REST_TIMEOUT: int = 20
 
     POSTGRES_USER: str
